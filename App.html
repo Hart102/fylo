@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fylo</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<style>
+    :root{
+        /* ## Colors */
+
+        /* ### Primary */
+
+        --Very-Dark-Blue: hsl(243, 87%, 12%);
+        --Desaturated-Blue: hsl(238, 22%, 44%);
+
+        /* ### Accent */
+
+        --Bright-Blue: hsl(224, 93%, 58%);
+        --Moderate-Cyan: hsl(170, 45%, 43%);
+
+        /* ### Neutral */
+
+        --Light-Grayish-Blue: hsl(240, 75%, 98%);
+        --Light-Gray: hsl(0, 0%, 75%);
+
+    }
+
+    /* Reused styles */
+    .h1{
+        color: var(--Very-Dark-Blue);
+    }
+
+    .btn-color{
+        background: var(--Bright-Blue);
+    }
+
+    .text-color{
+        color: var( --Light-Gray);
+    }
+
+    .menu{
+        display: none;
+    }
+
+
+    /* Stay Positive Styled */
+    .stay-bg{
+        background: url('./Img/bg-curve-desktop.svg') no-repeat;
+        background-position: cover;
+        background-size: cover;
+    }
+
+    .check{
+        color: var(--Moderate-Cyan);
+        position: relative;
+    }
+
+    .check:hover{
+        color: var(--Desaturated-Blue);
+    }
+
+    .check::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background: var(--Moderate-Cyan);
+    }
+
+    .img-container{
+        width: 4em;
+        height: 4em;
+        position: relative;
+    }
+    
+    .img-container img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+    }
+
+    .get-access{
+        color: var(--Light-Grayish-Blue);
+        background: var(--Desaturated-Blue);
+    }
+    
+    
+    footer{
+        background: var(--Desaturated-Blue);
+    }
+
+    @media (max-width: 992px) {
+        
+        .banner .d-lg-flex{
+            display: flex;
+            flex-direction: column-reverse !important;
+        }
+        .search .d-lg-flex{
+            display: flex;
+            flex-direction: column !important;
+        }
+        
+        /* MENU STYLING  */
+        .menu{
+            display: block;
+        }
+
+        
+        .navbar .container nav{
+            position: absolute;
+            left: -100%;
+            width: 80vw;
+            top: 6em;
+            transition: 0.5s;
+        }
+
+        .show{
+            left: 10% !important;
+        }
+  
+        .navbar .container nav ul{
+            display: flex ;
+            flex-direction: column;
+            text-align: center;
+            background: var(--Bright-Blue);
+        }
+        
+        .navbar .container nav ul li:hover{
+            background: var(--Very-Dark-Blue);
+        }
+        
+        .navbar .container nav ul li a{
+            color: #fff !important;
+        }
+
+        .navbar .container nav ul li a{
+            margin: 2em 0;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="container px-5 px-lg-0 border-bottom py-3">
+
+            <div class="logo">
+                <img src="./Img/logo.svg" alt="logo">
+    
+            </div>
+
+            <div class="menu">
+                <label for="menu-box">&#9776;</label>
+            </div>
+            
+            <nav>
+                <ul class="list-unstyled d-flex">
+                    <li><a class="nav-link text-dark" href="#">Features</a></li>
+                    <li><a class="nav-link text-dark" href="#">Team</a></li>
+                    <li><a class="nav-link text-dark" href="#">Sign in</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <section class="search banner my-5">
+        <div class="container d-lg-flex align-items-baseline justify-content-between px-lg-0">
+            <div class="col-md-6">
+                <div class="my-lg-0 my-5 text-left text-sm-centerq">
+                    <div class="h1">
+                        All your files in one secure location, accessible anywhere.
+                    </div>
+                    <p>Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
+                </div>
+
+                <div class="d-lg-flex">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <div class="btn btn-color ml-lg-2 my-lg-0 my-3 col-md-4 p-3 text-white">Get Started</div>
+                </div>
+            </div>
+
+
+            <div class="col-md-5">
+                <img src="./Img/illustration-1.svg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Positive -->
+    <section class="stay-bg banner py-5">
+        <div class="container mt-5 d-lg-flex justify-content-between">
+            <div class="col-md-6 my-lg-0 my-5">
+                <div>
+                    <div class="h1">Stay productive, wherever you are</div>
+                    <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs. <br />
+                    <br /> Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!</p>
+                </div>
+
+                <div class="btn px-0 check">
+                    See how fylo works
+                    <img src="./Img/icon-arrow.svg" alt="arrow">
+                </div>
+
+                <div class="col-md-8 py-4 px-3 my-5  bg-white">
+                    <img src="./Img/icon-quotes.svg">
+
+                    <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+
+                    <div class="d-flex align-items-center">
+                        <div class="img-container">
+                            <img src="./Img/avatar-testimonial.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="ml-4 mt-3">
+                            <div class="h6">Kyle Burton</div>
+                            <p>Founder & CEO, Huddle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <img class="img-fluid" src="./Img/illustration-2.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Get Access -->
+    <section class="get-access text-color py-5">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <div class="col-md-6">
+                <h1>Get early access today</h1>
+                <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+            </div>
+
+            <div class="col-md-5">
+                <div>
+                    <input class="form-control p-2" type="text" placeholder="example@fylo.com">
+                    <div class="btn p-3 text-white mt-4 btn-color">Get Started For Free</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-5">
+        <div class="container border-top">
+
+            <div class="logo my-4">
+                <img src="./Img/logo.svg" alt="">
+            </div>
+            
+            <div class="d-lg-flex justify-content-between text-white">
+
+                <ul class="list-unstyled">
+                    <li>
+                        <img src="./Img/icon-phone.svg">
+                        Phone: +1-543-123-4567 example@fylo.com
+                    </li>
+                    <li>
+                        <img src="./Img/icon-email.svg">
+                        example@fylo.com
+                    </li>
+                </ul>
+    
+                <ul class="list-unstyled">
+                    <li>About Us</li>
+                    <li>Jobs</li>
+                    <li>Press</li>
+                    <li>Blog</li>
+                </ul>
+
+                <ul class="list-unstyled">
+                    <li>Contact Us</li>
+                    <li>Terms</li>
+                    <li>Privacy</li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script>
+        let nav = document.querySelector('nav')
+        document.querySelector('.menu').addEventListener('click', () => {
+            nav.classList.toggle('show')
+        })
+    </script>
+</body>
+</html>
